@@ -10,64 +10,56 @@
 <meta name="keywords" content="iequality, comparison">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- <link rel="stylesheet" href="style/style.css"> -->
-</head>
 <body>
-  <header><h1>Child Template</h1></header>
-    <nav>
-    </nav>
-    <section>
-      <article> Description of Assignment
-        <ul>
-          <li> Problem: write a function that takes two numbers and returns the maximum of the two numbers
-          <li> Test cases:
-            <ul>
-              <li>number a > number b
-                <li> number a < number b
-                  <li> number a = number b
-            </ul>
-          <li> Use strings to return calculated answer
-            <ul>
-              <li> Examples:smaller, larger, equal
-            </ul>
-        </ul>
-      </article>
-    </section>
-    <section>
+   <header><h1>Max of Two Numbers Assignment</h1></header>
+   <nav></nav>
+   <aside></aside>
+   <section>
+     <article>Description of Assignment
+       <ul>
+         <li> Problem: write a function that takes two numbers and returns the maximum of the two
+         <li> Three test cases exist:
+           <ul>
+             <li> Number A > Number B
+             <li> Number A < Number B
+             <li> Number A = Number B
+           </ul>
+         <li> Use strings to return calculated answer
+           <ul>
+             <li> Examples: larger, smaller, equal
+           </ul>
+       </ul>
+     </article>
+   </section>
 
-    <section>
+   <section>
 
-      <form action="x.html" method="post" onsubmit="event.preventDefault";>
-      <!--Ensure this FORM doesn't work with PHP or other server side scripting languages-->
-      <p>&nbsp;</p>
-      <!-- See: https://www.w3schools.com/html/html_entities.asp-->
-      <!-- Non-breaking real space, adds real space to the webapge that is not elminiated by the browser (hard coded space)  -->
-      <p>
-        <label for="textfield">Number1:</label>
-        <input name="textfield1" type="text" id="textField1">
-        <a id = "validityTest1">See the alert</a>
-      </p>
-      <p>
-        <label for="textfield">Number2:</label>
-        <input name="textfield2" type="text" id="textField2">
-        <a id = "validityTest2">See the alert</a>
-      </p>
-      <p>&nbsp</p>
+     <form action="x.html" method="post" onsubmit="event.preventDefault";>
 
-      <!--Submit Button-->
-      <br><br>
-      <button type="button" onclick="main()">Submit</button>
-      <br>
-      <h3>The answer is:
-        <a id="answer">What is the Answer?!!!</a>
-      </h3>
-      <article></article>
+     <p>&nbsp;</p>
 
-    </section>
-    <aside><p></p></aside>
-    <section><h3></h3><article><p></p></article></section>
+     <fieldset>
+       <p>
+         <label for="textfield">Number 1:</label>
+         <input name="textfield1" type="text" id="textField1">
+         <a id="validityTest1">Type a Number</a>
+       </p>
+       <p>
+         <label for="textfield">Number 2:</label>
+         <input name="textfield2" type="text" id="textField2">
+         <a id="validityTest2">Type a Number</a>
+       </p>
+     </fieldset>
 
-    <script src="../Scripts/max2.js"></script>
-</body>
+     <br><br>
+     <button type="button" onclick="main()">Submit</button>
+     <br>
+     <h3><a id="answer">Are you connected</a></h3>
+   </section>
+
+   <script src="../Scripts/max2.js"></script>
+
+ </body>
 
 <footer>
 

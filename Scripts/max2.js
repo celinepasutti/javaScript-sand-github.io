@@ -1,36 +1,35 @@
 console.log("You made it to max2.js!");
 
-let stop = false; //Boolean for testNaN() validation function, see end of file
+let stop = false;
 
-function javascript () { //Where colsole.log tested file goes
+        function main()
+        {
+          let firstNumber = document.getElementById("textField1").value;
+          let secondNumber = document.getElementById("textField2").value;
+          //document.getElementById("CanBeAnything").innerHTML = alert ("You are connected");
+          document.getElementById("validityTest1").innerHTML = testNaN (firstNumber);
+          document.getElementById("validityTest2").innerHTML = testNaN (secondNumber);
 
-}
-//Main Function, necessary lines of code
-function main() {
-  let firstNumber, secondNumber; //Variables particular to JavsScript Assignment
-  //Get the value of the Heighth Input Field, id="testfield1", assign it to a variable
-  firstNumber = document.getElementById("textField1").value;
-  secondNumber = document.getElementById("textField2").value;
-  //Validate by alert or HTML Text in p-tag
-  document.getElementById("validityTest1").innerHTML = alert (testNAN (firstNumber) );
-  document.getElementById("validityTest1").innerHTML = testNAN (firstNumber);
-  document.getElementById("validityTest2").innerHTML = alert (testNAN (secondNumber) );
-  document.getElementById("validityTest2").innerHTML = testNAN (secondNumber);
-  if (stop == true) {
-      document.getElementById("answer").innerHTML = "Restart because I said so." //Change to more appropriate message
-    } else {
-      //Difference between calling functions with arguements and sending to parameter's, local variables
-      console.log("What did you say?", javaScriptFunction-Solution (firstNumber, secondNumber)); // Change to more appropriate message
-      document.getElementById("answer").innerHTML = "What did you say? " + geometry (firstNumber, secondNumber);
-    }
-} //End main()
-//
-function testNaN (number) {
-  if ( isNaN (number) ) { //NaN are not values o REAL Number System
-    stop = true;
-    return "Type a Real Number"
-  } else {
-    return "Input Validated"
-  }
+          if (stop = true;) {
+            document.getElementById("answer").innerHTML = "Restart, because I said so!"
+          } else {
+            document.getElementById("answer").innerHTML = "What did you say?" + solution(firstNumber, secondNumber);
+          }
+        }
 
-}//End testNaN()
+                function testNaN (number)
+                {
+                  if(number == "") {
+                    stop = true;
+                  return "Field empty. Please enter a real number."
+                  }
+
+                  if ( isNaN(number) )
+                  {
+                    stop = true;
+                    return "Entry invalid. Please enter a real number."
+                  } else
+                  {
+                    return "Entry validated."
+                  }
+        }
