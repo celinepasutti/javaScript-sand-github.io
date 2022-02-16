@@ -6,26 +6,28 @@
 </head>
 
 <meta name="author" content="Celine Jugandi Pasutti">
-<meta name="description" content=""> <!--Webpage Description -->
-<meta name="keywords" content="">
+<meta name="description" content="Landscape or Portrait Assignment"> <!--Webpage Description -->
+<meta name="keywords" content="comparing display geometries">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- <link rel="stylesheet" href="style/style.css"> -->
 <body>
 
-    <header><h1>Child Template</h1></header>
-      <nav>
-      </nav>
+    <header><h1>Landscape or Portrait Assignment</h1></header>
+      <nav></nav>
       <section>
         <article> Description of Assignment
           <ul>
-            <li> Problem:
+            <li> Problem: Calculate if a geometry example is in landscape mode, portrait mode, or square.
             <li> Test cases:
               <ul>
-                <li>
+                <li> Input is a width number and height number
+                  <li> Examples of images, screens, displays, etc.
               </ul>
-            <li> Use strings? to return calculated answer?
+            <li> Return the word for the calculated result.
               <ul>
-                <li> Examples:
+                <li> Example: Landscape --> width > height
+                  <li> Example: Portrait --> width < height
+                    <li> Example: Square --> width = height
               </ul>
           </ul>
         </article>
@@ -35,10 +37,9 @@
       <section>
 
         <form action="x.html" method="post" onsubmit="event.preventDefault";>
-        <!--Ensure this FORM doesn't work with PHP or other server side scripting languages-->
+
         <p>&nbsp;</p>
-        <!-- See: https://www.w3schools.com/html/html_entities.asp-->
-        <!-- Non-breaking real space, adds real space to the webapge that is not elminiated by the browser (hard coded space)  -->
+
         <p>
           <label for="textfield">Number1:</label>
           <input name="textfield1" type="text" id="textField1">
@@ -107,8 +108,8 @@
         <br><br>
         <button type="button" onclick="main()">Submit</button>
         <br>
-        <h3>The answer is:
-          <a id="">What is the Answer?!!!</a>
+        <h3>Display orientation is:
+          <a id="answeer">???</a>
         </h3>
         <article></article>
 
