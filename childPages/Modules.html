@@ -2,77 +2,63 @@
 <head>
 <html lang="en" dir="ltr">
 <meta charset="utf-8">
-  <title>Modules</title>
-</head>
+  <title>Modulus</title>
 
-<meta name="author" content="Celine Jugandi Pasutti">
-<meta name="description" content="Modulus Assignment "> <!--Webpage Description -->
-<meta name="keywords" content="">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="author" content="Celine Jugandi Pasutti">
+  <meta name="description" content="Modulus Assignment "> <!--Webpage Description -->
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 <!-- <link rel="stylesheet" href="style/style.css"> -->
 <body>
 
     <header><h1>Modulus Assignment</h1></header>
-      <nav>
-      </nav>
       <section>
         <article> Description of Assignment
           <ul>
             <li> Problem:simply ID whether a number is even or odd.
             <li> Test cases:
-              <ul>
-                <li>Even mean modulus return 0: 4%2 = 0, 12%2 = 0.
-                  <li>Odd mean modulus return 1: 5%2 = 1, 13%2 = 1.
-              </ul>
-              </ul>
+            <ul>
+              <li>Even mean modulus return 0: 4%2 = 0, 12%2 = 0.
+              <li>Odd mean modulus return 1: 5%2 = 1, 13%2 = 1.
+            </ul>
+          </ul>
         </article>
       </section>
-      <section>
 
       <section>
-
         <form action="x.html" method="post" onsubmit="event.preventDefault";>
-        <!--Ensure this FORM doesn't work with PHP or other server side scripting languages-->
-        <p>&nbsp;</p>
-        <!-- See: https://www.w3schools.com/html/html_entities.asp-->
-        <!-- Non-breaking real space, adds real space to the webapge that is not elminiated by the browser (hard coded space)  -->
-        <p>
-          <fieldset>
-          <legend> Enter a number </legend>
-          <label for="textfield">Number:</label>
-          <input name="textfield1" type="text" id="textField1">
-        </p>
-      </fieldset>
+          <p>&nbsp;</p>
+          <p>
+            <fieldset>
+              <legend> Enter a number </legend>
+              <label for="textfield">Number:</label>
+              <input name="textfield1" type="text" id="textField1">
+              <a id="validityTest1">Type a Number</a>
+            </fieldset>
+          </p>
 
-
+          <br><br>
+          <button type="button" onclick="main()">Submit</button>
+          <br>
+          <h3><a id="answer"></a></h3>
       </section>
-      <aside><p></p></aside>
-      <section><h3></h3><article><p></p></article></section>
 
-    <script src="Scripts/modules.js"></script>
+  <script src="../Scripts/modulus.js"></script>
+
 </body>
-
 <footer>
-
-
-
-    <!-- date accessed 20210916 -->
-    <blockquote cite="https://www.rottentomatoes.com/m/ferris_buellers_day_off/quotes/#:~:text=could%20miss%20it-,Ferris%20Bueller%3A%20Life%20moves%20pretty%20fast.,while%2C%20you%20could%20miss%20it.&text=Ferris%20Bueller%3A%20It's%20not%20that,any%20ism%20for%20that%20matter.">
-
+  <!-- date accessed 20210916 -->
+  <blockquote cite="https://www.rottentomatoes.com/m/ferris_buellers_day_off/quotes/#:~:text=could%20miss%20it-,Ferris%20Bueller%3A%20Life%20moves%20pretty%20fast.,while%2C%20you%20could%20miss%20it.&text=Ferris%20Bueller%3A%20It's%20not%20that,any%20ism%20for%20that%20matter.">
   </blockquote>
-    <p><em>Life moves pretty fast. If you don't stop and look around once in awhile, you could miss it.
-  </em></p>
-      <p>
-        <strong>
-            <a href="https://www.rottentomatoes.com/m/ferris_buellers_day_off/quotes/#:~:text=could%20miss%20it-,Ferris%20Bueller%3A%20Life%20moves%20pretty%20fast.,while%2C%20you%20could%20miss%20it.&text=Ferris%20Bueller%3A%20It's%20not%20that,any%20ism%20for%20that%20matter." target= "_blank">
-          - Ferris Bueller
-            </a>
-        </strong>
-      </p>
-<p>&copy Celine Jugandi-Pasutti, powered by celinepasutti in GitHub
-</p>
-<p>Started on February 7, 2021</p>
-
-
+  <p><em>Life moves pretty fast. If you don't stop and look around once in awhile, you could miss it.</em></p>
+  <p>
+    <strong>
+      <a href="https://www.rottentomatoes.com/m/ferris_buellers_day_off/quotes/#:~:text=could%20miss%20it-,Ferris%20Bueller%3A%20Life%20moves%20pretty%20fast.,while%2C%20you%20could%20miss%20it.&text=Ferris%20Bueller%3A%20It's%20not%20that,any%20ism%20for%20that%20matter." target= "_blank"> - Ferris Bueller </a>
+    </strong>
+  </p>
+  <p>&copy Celine Jugandi-Pasutti, powered by celinepasutti in GitHub</p>
+  <p>Started on February 7, 2021</p>
 </footer>
 </html>

@@ -1,36 +1,66 @@
 console.log("You made it to ordergrade.js!");
 
-let stop = false; //Boolean for testNaN() validation function, see end of file
+stop = false;
 
-function javascript () { //Where colsole.log tested file goes
+function javascript () {
 
 }
-//Main Function, necessary lines of code
+
+
+function solution(gr1, gr2, gr3, gr4, gr5) {
+  let kms = (gr1*1) + (gr2*1) + (gr3*1) + (gr4*1) + (gr5*1);
+  let done = kms/5;
+  console.log(done);
+
+  // F: 1-49% D: 50-59% C: 60-69% B: 70-79 A: 80-100%
+  if (done >= 1 && done <= 49.999) return "F.";
+
+  if (done >= 50 && done <= 59.999) return "D.";
+
+  if (done >= 60 && done <= 69.999) return "C.";
+
+  if (done >= 70 && done <= 79.999) return "B.";
+
+  if (done >= 80 && done <= 100) return "A.";
+
+}
+
+
+
 function main() {
-  let firstNumber, secondNumber; //Variables particular to JavsScript Assignment
-  //Get the value of the Heighth Input Field, id="testfield1", assign it to a variable
-  firstNumber = document.getElementById("textField1").value;
-  secondNumber = document.getElementById("textField2").value;
-  //Validate by alert or HTML Text in p-tag
-  document.getElementById("validityTest1").innerHTML = alert (testNAN (firstNumber) );
-  document.getElementById("validityTest1").innerHTML = testNAN (firstNumber);
-  document.getElementById("validityTest2").innerHTML = alert (testNAN (secondNumber) );
-  document.getElementById("validityTest2").innerHTML = testNAN (secondNumber);
+
+
+  let gr1 = document.getElementById("textField1").value;
+  let gr2 = document.getElementById("textField2").value;
+  let gr3= document.getElementById("textField3").value;
+  let gr4 = document.getElementById("textField4").value;
+  let gr5 = document.getElementById("textField5").value;
+
+  document.getElementById("validityTest1").innerHTML = testNaN (gr1);
+  document.getElementById("validityTest2").innerHTML = testNaN (gr2);
+  document.getElementById("validityTest3").innerHTML = testNaN (gr3);
+  document.getElementById("validityTest4").innerHTML = testNaN (gr4);
+  document.getElementById("validityTest5").innerHTML = testNaN (gr5);
+
   if (stop == true) {
-      document.getElementById("answer").innerHTML = "Restart because I said so." //Change to more appropriate message
-    } else {
-      //Difference between calling functions with arguements and sending to parameter's, local variables
-      console.log("What did you say?", javaScriptFunction-Solution (firstNumber, secondNumber)); // Change to more appropriate message
-      document.getElementById("answer").innerHTML = "What did you say? " + geometry (firstNumber, secondNumber);
-    }
-} //End main()
-//
-function testNaN (number) {
-  if ( isNaN (number) ) { //NaN are not values o REAL Number System
-    stop = true;
-    return "Type a Real Number"
+    document.getElementById("answer").innerHTML = "Restart ... because I said so.";
   } else {
-    return "Input Validated"
+     document.getElementById("answer").innerHTML = "Average letter grade is " + solution(gr1, gr2, gr3, gr4, gr5);
+  }
+}
+
+function testNaN (number) {
+  if(number == "") {
+    stop = true;
+    return "Field empty. Please enter a real number.";
   }
 
-}//End testNaN()
+  if ( isNaN(number) )
+  {
+    stop = true;
+    return "Entry invalid. Please enter a real number.";
+  } else
+  {
+    return "Entry validated.";
+  }
+}
