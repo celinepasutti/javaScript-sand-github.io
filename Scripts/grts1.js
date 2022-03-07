@@ -1,36 +1,47 @@
 console.log("You made it to grts1.js!");
 
-let stop = false; //Boolean for testNaN() validation function, see end of file
+let stop = false;
 
-function javascript () { //Where colsole.log tested file goes
+function solution(time) {
+  //Early morning (12AM - 6:59AM): "Hello."
+  //Before noon (7AM - 11:59AM): "Good morning!"
+  //Afternoon  (12PM - 4:59PM): "Good afternoon!"
+  //Evening (5PM - 11:59PM): "Good evening."
+
+  if (time >= 12:00 AM && time <= 6:59 AM) return "Hello.";
+
+  if (time >= 7:00 AM && time <= 11:59 AM) return "Good morning!";
+
+  if (time >= 12:00 PM && time <= 4:59 PM) return "Good afternoon!";
+
+  if (time >= 5:00 PM && time <= 11:59 PM) return "Good evening.";
+
+
 
 }
-//Main Function, necessary lines of code
+
 function main() {
-  let firstNumber, secondNumber; //Variables particular to JavsScript Assignment
-  //Get the value of the Heighth Input Field, id="testfield1", assign it to a variable
-  firstNumber = document.getElementById("textField1").value;
-  secondNumber = document.getElementById("textField2").value;
-  //Validate by alert or HTML Text in p-tag
-  document.getElementById("validityTest1").innerHTML = alert (testNAN (firstNumber) );
-  document.getElementById("validityTest1").innerHTML = testNAN (firstNumber);
-  document.getElementById("validityTest2").innerHTML = alert (testNAN (secondNumber) );
-  document.getElementById("validityTest2").innerHTML = testNAN (secondNumber);
-  if (stop == true) {
-      document.getElementById("answer").innerHTML = "Restart because I said so." //Change to more appropriate message
+    let time = document.getElementById("textField1").value;
+    document.getElementById("validityTest1").innerHTML = testNaN (time);
+
+    if (stop == true) {
+      document.getElementById("answer").innerHTML = "Restart ... because I said so.";
     } else {
-      //Difference between calling functions with arguements and sending to parameter's, local variables
-      console.log("What did you say?", javaScriptFunction-Solution (firstNumber, secondNumber)); // Change to more appropriate message
-      document.getElementById("answer").innerHTML = "What did you say? " + geometry (firstNumber, secondNumber);
+       document.getElementById("answer").innerHTML = "Average letter grade is " + solution(time);
     }
-} //End main()
-//
-function testNaN (number) {
-  if ( isNaN (number) ) { //NaN are not values o REAL Number System
-    stop = true;
-    return "Type a Real Number"
-  } else {
-    return "Input Validated"
   }
 
-}//End testNaN()
+
+  function testNaN(number) {
+    if(number == "") {
+      stop = true;
+      return "Field empty. Please enter a number.";
+    }
+
+    if ( isNaN(number) ) {
+      stop = true;
+      return "Entry invalid. Please enter a number.";
+    } else {
+      return "Entry validated.";
+    }
+  }

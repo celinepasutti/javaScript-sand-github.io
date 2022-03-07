@@ -1,36 +1,40 @@
 console.log("You made it to FizzBuzz.js!");
 
-let stop = false; //Boolean for testNaN() validation function, see end of file
+let stop = false;
 
-function javascript () { //Where colsole.log tested file goes
-
-}
-//Main Function, necessary lines of code
-function main() {
-  let firstNumber, secondNumber; //Variables particular to JavsScript Assignment
-  //Get the value of the Heighth Input Field, id="testfield1", assign it to a variable
-  firstNumber = document.getElementById("textField1").value;
-  secondNumber = document.getElementById("textField2").value;
-  //Validate by alert or HTML Text in p-tag
-  document.getElementById("validityTest1").innerHTML = alert (testNAN (firstNumber) );
-  document.getElementById("validityTest1").innerHTML = testNAN (firstNumber);
-  document.getElementById("validityTest2").innerHTML = alert (testNAN (secondNumber) );
-  document.getElementById("validityTest2").innerHTML = testNAN (secondNumber);
-  if (stop == true) {
-      document.getElementById("answer").innerHTML = "Restart because I said so." //Change to more appropriate message
+function solution(number) {
+    if (number%3 == 0 && number%5 == 0) {
+      return "FizzBuzz";
+    } else if (number%3 == 0) {
+      return "Fizz";
+    } else if (number%5 == 0) {
+      return "Buzz";
     } else {
-      //Difference between calling functions with arguements and sending to parameter's, local variables
-      console.log("What did you say?", javaScriptFunction-Solution (firstNumber, secondNumber)); // Change to more appropriate message
-      document.getElementById("answer").innerHTML = "What did you say? " + geometry (firstNumber, secondNumber);
+      return(number);
     }
-} //End main()
-//
-function testNaN (number) {
-  if ( isNaN (number) ) { //NaN are not values o REAL Number System
-    stop = true;
-    return "Type a Real Number"
+}
+
+function main() {
+  let number = document.getElementById("textField1").value;
+  document.getElementById("validityTest1").innerHTML = testNaN (number);
+
+  if (stop == true) {
+    document.getElementById("answer").innerHTML = "Restart ... because I said so.";
   } else {
-    return "Input Validated"
+    document.getElementById("answer").innerHTML =  solution(number);
+  }
+}
+
+function testNaN (number) {
+  if(number == "") {
+    stop = true;
+    return "Field empty. Please enter a number.";
   }
 
-}//End testNaN()
+  if ( isNaN(number) ) {
+    stop = true;
+    return "Entry invalid. Please enter a number.";
+  } else {
+    return "Entry validated.";
+  }
+}
