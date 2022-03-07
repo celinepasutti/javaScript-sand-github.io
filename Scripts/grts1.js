@@ -22,6 +22,7 @@ function solution(time) {
 
 function main() {
     let time = document.getElementById("textField1").value;
+    console.log("time var", time);
     document.getElementById("validityTest1").innerHTML = testNaN (time);
 
     if (stop == true) {
