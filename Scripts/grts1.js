@@ -20,10 +20,13 @@ function solution(time) {
 
 }
 
+
 function main() {
     let time = document.getElementById("textField1").value;
     console.log("time var", time);
-    document.getElementById("validityTest1").innerHTML = testNaN (time);
+    document.getElementById("validityTest1").innerHTML = testNaN (number);
+    
+    document.getElementById("validityTest1").innerHTML = alert ("this is working");
 
     if (stop == true) {
       document.getElementById("answer").innerHTML = "Restart ... because I said so.";
